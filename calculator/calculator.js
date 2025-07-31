@@ -1,52 +1,48 @@
-// Step 1: Define arithmetic functions
-function add(number1, number2) {
-  return number1 + number2;
+// Arithmetic functions
+function add(a, b) {
+  return a + b;
 }
 
-function subtract(number1, number2) {
-  return number1 - number2;
+function subtract(a, b) {
+  return a - b;
 }
 
-function multiply(number1, number2) {
-  return number1 * number2;
+function multiply(a, b) {
+  return a * b;
 }
 
-function divide(number1, number2) {
-  if (number2 === 0) {
+function divide(a, b) {
+  if (b === 0) {
     return "Cannot divide by zero";
   }
-  return number1 / number2;
+  return a / b;
 }
 
-// Step 2: Helper function to get input values
-function getInputValues() {
-  const number1 = parseFloat(document.getElementById("number1").value) || 0;
-  const number2 = parseFloat(document.getElementById("number2").value) || 0;
-  return { number1, number2 };
-}
-
-// Step 3: Event listeners for buttons
-
+// Event listeners for buttons
 document.getElementById("add").addEventListener("click", function () {
-  const { number1, number2 } = getInputValues();
-  const result = add(number1, number2);
+  const a = parseFloat(document.getElementById("number1").value) || 0;
+  const b = parseFloat(document.getElementById("number2").value) || 0;
+  const result = add(a, b);
   document.getElementById("calculation-result").textContent = result;
 });
 
 document.getElementById("subtract").addEventListener("click", function () {
-  const { number1, number2 } = getInputValues();
-  const result = subtract(number1, number2);
+  const a = parseFloat(document.getElementById("number1").value) || 0;
+  const b = parseFloat(document.getElementById("number2").value) || 0;
+  const result = subtract(a, b);
   document.getElementById("calculation-result").textContent = result;
 });
 
 document.getElementById("multiply").addEventListener("click", function () {
-  const { number1, number2 } = getInputValues();
-  const result = multiply(number1, number2);
+  const a = parseFloat(document.getElementById("number1").value) || 0;
+  const b = parseFloat(document.getElementById("number2").value) || 0;
+  const result = multiply(a, b);
   document.getElementById("calculation-result").textContent = result;
 });
 
 document.getElementById("divide").addEventListener("click", function () {
-  const { number1, number2 } = getInputValues();
-  const result = divide(number1, number2);
+  const a = parseFloat(document.getElementById("number1").value) || 0;
+  const b = parseFloat(document.getElementById("number2").value) || 0;
+  const result = divide(a, b);
   document.getElementById("calculation-result").textContent = result;
 });
